@@ -71,6 +71,7 @@ Adafruit_Thermal printer(&mySerial);
 
 // décommentez la fonction suivante, en prenant soin de commenter la précédente, pour utiliser la boîte à histoire comme générateur de cadavres exquis.
 
+// début de la fonction cadavre exquis
 
 /*
   void textes() {
