@@ -1,5 +1,7 @@
 # Boîte à histoires
-Dispositif qui imprime une histoire aléatoire à chaque fois que le bouton est pressé. 
+Petite imprimante à histoire, deux modes : 
+- distributeur de texte : imprime une histoire différente à chaque fois que le bouton est appuyé
+- cadavre exquis : génére des poèmes aléatoires
 
 Ce programme s'appuie sur le travail mené par Giles Booth ([http://www.suppertime.co.uk/blogmywiki/2012/10/howtopoems/]()) et la dadaist poetry box réalisée par robottini ([http://robottini.altervista.org/dadaist-poetry-box]())
 
