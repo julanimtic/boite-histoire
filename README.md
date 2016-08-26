@@ -15,6 +15,6 @@ Ce programme utilise la bibliothèque suivante :
 
 Adafruit Thermal Printer Library : 
 [https://github.com/adafruit/Adafruit-Thermal-Printer-Library
-]()
+](https://github.com/adafruit/Adafruit-Thermal-Printer-Library)
 Written by Limor Fried/Ladyada for Adafruit Industries, with contributions from the open source community.  Originally based on Thermal library from bildr.org
 MIT license, all text above must be included in any redistribution.
