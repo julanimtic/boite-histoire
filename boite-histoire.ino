@@ -1,4 +1,4 @@
-/*
+  /*
 Ce programme s'appuie sur le travail mené par Giles Booth (http://www.suppertime.co.uk/blogmywiki/2012/10/howtopoems/) 
 et la dadaist poetry box réalisée par robottini (http://robottini.altervista.org/dadaist-poetry-box)
 
@@ -75,7 +75,10 @@ const char string_5[] PROGMEM = "Charles Baudelaire";
 
 // Tableau des textes
 
-const char* const string_table[] PROGMEM = {string_0, string_1, string_2, string_3, string_4, string_5,}; // en fonction du mode choisi compléter les valeurs string manquantes
+const char* const string_table[] PROGMEM = {string_0, string_1,}; // si besoin compléter les valeurs string manquantes 
+const char* const string_table1[] PROGMEM = {string_0, string_1,}; // si mode cadavre exquis commentez pour désactiver
+const char* const string_table2[] PROGMEM = {string_0, string_1,}; // si mode cadavre exquis commentez pour désactiver
+
 
 char buffer[1040];    // assurez-vous que la valeur indiquée soit supérieure au nombre maximum de caractères d'un string
 
@@ -98,7 +101,7 @@ int buttonState = 0;         // variable pour vérifier l'état du bouton
 //fonction intégrant les différents textes à imprimer appelés ici vers 1, vers 2, ...
 void vers1 () {
 
-chiffreal = random(0,2); // sélectionne un string entre 0 et 6 
+chiffreal = random(0,2); // sélectionne un string entre 0 et 1 
 
   {
     strcpy_P(buffer, (char*)pgm_read_word(&(string_table[chiffreal]))); // copie le string sélectionné aléatoirement depuis la mémoire flash
@@ -109,10 +112,10 @@ chiffreal = random(0,2); // sélectionne un string entre 0 et 6
 
   void vers2 () {
 
-chiffreal = random(2,4);
+// chiffreal = random(2,4); // décommentez pour le mode cadavre exquis
 
   {
-    strcpy_P(buffer, (char*)pgm_read_word(&(string_table[chiffreal]))); // Necessary casts and dereferencing, just copy.
+    strcpy_P(buffer, (char*)pgm_read_word(&(string_table1[chiffreal]))); // Necessary casts and dereferencing, just copy.
     printer.println(buffer);
     delay( 1000 );
    }
@@ -120,10 +123,10 @@ chiffreal = random(2,4);
 
     void vers3 () {
 
-chiffreal = random(4,6);
+// chiffreal = random(4,6);// décommentez pour le mode cadavre exquis
 
   {
-    strcpy_P(buffer, (char*)pgm_read_word(&(string_table[chiffreal]))); // Necessary casts and dereferencing, just copy.
+    strcpy_P(buffer, (char*)pgm_read_word(&(string_table2[chiffreal]))); // Necessary casts and dereferencing, just copy.
     printer.println(buffer);
     delay( 1000 );
 
@@ -160,7 +163,6 @@ void loop() {
     printer.println("La petite boite \x85 histoire"); // placez ici votre signature
     printer.boldOff(); // fin du texte en gras
     printer.feed(2);
-    //lance la fonction textes (voir plus haut)
   printer.sleep(); //met en sommeil l'imprimante
     
   } 
