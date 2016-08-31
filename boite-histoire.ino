@@ -62,22 +62,29 @@ int chiffreal = 0; // définit le nom de la valeur aléatoire pour déterminer l
 
 const char string_0[] PROGMEM = "La Grenouille qui veut se faire aussi grosse que le Boeuf";   //placez ici le titre de l'oeuvre
 const char string_1[] PROGMEM = "Spleen IV";
+const char string_2[] PROGMEM = "okititle";
+const char string_3[] PROGMEM = "yeahtitle";
 
 // placez le texte de votre histoire/poème ici
 // le texte doit être sur une seule ligne, voir le wiki du projet pour le formatage du texte et des caractères spéciaux
-const char string_2[] PROGMEM = "Une Grenouille vit un Boeuf\nQui lui sembla de belle taille.\nElle, qui n\x27\x82tait pas grosse en tout comme un oeuf,\nEnvieuse, s\x27\x82tend, et s\x27 enfle, et se travaille,\nPour \x82galer l\x27 animal en \ngrosseur,\nDisant : \x22Regardez bien, ma \nsoeur ;\nEst-ce assez ? dites-moi ;\n n\x27y suis-je point encore ?\n-Nenni. \n-M\x27y voici donc ? \n-Point du tout. \n-M\x27y voil\x85 ?\n- Vous n\x27 en approchez point.\x22 \nLa ch\x82tive pecore\nS\x27 enfla si bien qu\x27 elle creva.\nLe monde est plein de gens qui \nne sont pas plus sages :\nTout bourgeois veut b\x83tir comme les grands seigneurs,\nTout petit prince a des \nambassadeurs,\nTout marquis veut avoir des \npages.\x27";   
-const char string_3[] PROGMEM = "Quand le ciel bas et lourd p\x8Ase comme un couvercle \n Sur l\x27 esprit g\x82missant en proie aux longs ennuis, \n Et que de l\x27 horizon embrassant tout le cercle \n Il nous verse un jour noir plus triste que les nuits; \n Quand la terre est chang\x82e en un cachot humide,\n Où l\x27Esp\x82rance, comme une chauve-souris, \n S\x27 en va battant les murs de son aile timide \n Et se cognant la t\x88te \x85 des plafonds pourris;\n Quand la pluie \x82talant ses immenses traîn\x82es \n D\x27 une vaste prison imite les barreaux, \n Et qu\x27 un peuple muet d\x27 infâmes araign\x82es \n Vient tendre ses filets au fond de nos cerveaux,\n Des cloches tout \x85 coup sautent avec furie \n Et lancent vers le ciel un affreux hurlement, \n Ainsi que des esprits errants et sans patrie \n Qui se mettent \x85 geindre opiniâtrement.\n - Et de longs corbillards, sans tambours ni musique, \n D\x82filent lentement dans mon âme; l\x27 Espoir, \n Vaincu, pleure, et l\x27 Angoisse atroce, despotique, \n Sur mon crâne inclin\x82 plante son drapeau noir.";
-const char string_4[] PROGMEM = "Jean de la Fontaine";   
-const char string_5[] PROGMEM = "Charles Baudelaire";
+const char string_4[] PROGMEM = "Une Grenouille vit un";   
+const char string_5[] PROGMEM = "Quand le ciel bas et lourd p\x8Ase comme un couvercle \n Sur l\x27 esprit g\x82";
+const char string_6[] PROGMEM = "oki";
+const char string_7[] PROGMEM = "yeah";
 
+
+const char string_8[] PROGMEM = "Jean de la Fontaine";   
+const char string_9[] PROGMEM = "Charles Baudelaire";
+const char string_10[] PROGMEM = "okijulien";
+const char string_11[] PROGMEM = "yeahjulien";
 //fin du mode histoire
 
 
 // Tableau des textes
 
-const char* const string_table[] PROGMEM = {string_0, string_1,}; // si besoin compléter les valeurs string manquantes 
-const char* const string_table1[] PROGMEM = {string_0, string_1,}; // si mode cadavre exquis commentez pour désactiver
-const char* const string_table2[] PROGMEM = {string_0, string_1,}; // si mode cadavre exquis commentez pour désactiver
+const char* const string_table[] PROGMEM = {string_0, string_1,string_2,string_3,}; // si besoin compléter les valeurs string manquantes 
+const char* const string_table1[] PROGMEM = {string_4, string_5,string_6, string_7,}; // si mode cadavre exquis commentez pour désactiver
+const char* const string_table2[] PROGMEM = {string_8, string_9,string_10, string_11,}; // si mode cadavre exquis commentez pour désactiver
 
 
 char buffer[1040];    // assurez-vous que la valeur indiquée soit supérieure au nombre maximum de caractères d'un string
@@ -101,10 +108,10 @@ int buttonState = 0;         // variable pour vérifier l'état du bouton
 //fonction intégrant les différents textes à imprimer appelés ici vers 1, vers 2, ...
 void vers1 () {
 
-chiffreal = random(0,2); // sélectionne un string entre 0 et 1 
+chiffreal = random(0,4); // sélectionne un string entre 0 et 4 
 
   {
-    strcpy_P(buffer, (char*)pgm_read_word(&(string_table[chiffreal]))); // copie le string sélectionné aléatoirement depuis la mémoire flash
+    strcpy_P(buffer, (char*)pgm_read_word(&(string_table[chiffreal]))); // copie le string sélectionné aléatoirement de la table string_table
     printer.println(buffer); //imprime le string situé dans le buffer de la carte
     delay( 1000 ); // patiente une seconde
    }
@@ -115,7 +122,7 @@ chiffreal = random(0,2); // sélectionne un string entre 0 et 1
 // chiffreal = random(2,4); // décommentez pour le mode cadavre exquis
 
   {
-    strcpy_P(buffer, (char*)pgm_read_word(&(string_table1[chiffreal]))); // Necessary casts and dereferencing, just copy.
+    strcpy_P(buffer, (char*)pgm_read_word(&(string_table1[chiffreal]))); // copie le string sélectionné aléatoirement de la table string_table1
     printer.println(buffer);
     delay( 1000 );
    }
@@ -126,7 +133,7 @@ chiffreal = random(0,2); // sélectionne un string entre 0 et 1
 // chiffreal = random(4,6);// décommentez pour le mode cadavre exquis
 
   {
-    strcpy_P(buffer, (char*)pgm_read_word(&(string_table2[chiffreal]))); // Necessary casts and dereferencing, just copy.
+    strcpy_P(buffer, (char*)pgm_read_word(&(string_table2[chiffreal]))); 
     printer.println(buffer);
     delay( 1000 );
 
