@@ -60,23 +60,23 @@ int chiffreal = 0; // définit le nom de la valeur aléatoire pour déterminer l
 
 //début du mode histoire/poème rajoutez les signes /* et */ pour désactiver ce mode si vous souhaitez utiliser le mode cadavre exquis
 
-const char string_0[] PROGMEM = "La Grenouille qui veut se faire aussi grosse que le Boeuf";   //placez ici le titre de l'oeuvre
-const char string_1[] PROGMEM = "Spleen IV";
-const char string_2[] PROGMEM = "okititle";
-const char string_3[] PROGMEM = "yeahtitle";
+const char string_0[] PROGMEM = "Viens  \n";   //placez ici le titre de l'oeuvre
+const char string_1[] PROGMEM = "La langue du Youshlaouna \n";
+const char string_2[] PROGMEM = "Il est tres chouette votrou theatre \n";
+const char string_3[] PROGMEM = "Quelle chance";
 
 // placez le texte de votre histoire/poème ici
 // le texte doit être sur une seule ligne, voir le wiki du projet pour le formatage du texte et des caractères spéciaux
-const char string_4[] PROGMEM = "Une Grenouille vit un";   
-const char string_5[] PROGMEM = "Quand le ciel bas et lourd p\x8Ase comme un couvercle \n Sur l\x27 esprit g\x82";
-const char string_6[] PROGMEM = "oki";
-const char string_7[] PROGMEM = "yeah";
+const char string_4[] PROGMEM = "Ma main paume vers le sol,\n tombe de bas en haut.\n Ma main paume vers le ciel, \n se replie vers moi. \n Mes doigts se replient \n sur ma main.\n Ma main se replie \n sur elle-meme. \n Mon index se replie sur \n mon poing ferme.\n Mon coude se replie. \n Ma tete dodeline. \n Mes yeux roulent. \n";   
+const char string_5[] PROGMEM = "La langue du Youshlaouna. \n La langue du Chiang-ien.  \n La langue du Choubouloutone.  \n La langue du Touroukoukoulou. \n La langue du : Kana:Kana. \n La langue du Tchigatchigatchiga \n La langue du rororo, \n du Bleubleubleu, \n du Fleufleufleu. \n La langue du C est bon \n c est bon \n c est bon. \n";
+const char string_6[] PROGMEM = "Bonjour tout le monde.\n Je suis tres content pour vous \n vous rencontrer jourdhui. \n Bon… Je tsui je vous remercie. \n Et tres bonne je suis tres chouette \n votrou… votrou… voutrou… theatre. \n Je vous remercie et bonn journée en r voir. \n";
+const char string_7[] PROGMEM = "Quelle chance d etre \n au pays vertueux \n des droits de l’homme, \n  baigne dans la lumiere \n de l esprit des hauts nivellateurs \n tel mon bon docteur  \n Joseph Ignace Guillotin. \n Chacun est libre \n de s exprimer comme il peut \n pourvu qu il ne blesse \n physiquement \n quand la propriete chaque jour \n offense la pauvrete \n des sous-pauvres \n dans un air sature d azote.\n";
 
 
-const char string_8[] PROGMEM = "Jean de la Fontaine";   
-const char string_9[] PROGMEM = "Charles Baudelaire";
-const char string_10[] PROGMEM = "okijulien";
-const char string_11[] PROGMEM = "yeahjulien";
+const char string_8[] PROGMEM = "Laurent Colomb \n Vocabul\x82s";   
+const char string_9[] PROGMEM = "Laurent Colomb \n Vocabul\x82s";
+const char string_10[] PROGMEM = "Laurent Colomb \n Vocabul\x82s";
+const char string_11[] PROGMEM = "Laurent Colomb \n Vocabul\x82s";
 //fin du mode histoire
 
 
