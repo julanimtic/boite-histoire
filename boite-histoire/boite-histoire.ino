@@ -156,7 +156,7 @@ void loop() {
   buttonState = digitalRead(buttonPin);
 
   // Si le bouton est pressé
-  if (buttonState == HIGH) {
+  if (buttonState == LOW) {
     // Allume la led
     digitalWrite(ledPin, HIGH);
     printer.wake(); //réveille l'imprimante
