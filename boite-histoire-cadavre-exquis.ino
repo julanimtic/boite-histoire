@@ -73,7 +73,7 @@ chiffreal = random(0,5); // sélectionne un string entre 0 et 4
 
   void vers2 () {
 
-chiffreal = random(6,11); // décommentez pour le mode cadavre exquis
+chiffreal = random(0,5); // décommentez pour le mode cadavre exquis
 
   {
     strcpy_P(buffer, (char*)pgm_read_word(&(string_table2[chiffreal]))); // copie le string sélectionné aléatoirement de la table string_table1
@@ -84,7 +84,7 @@ chiffreal = random(6,11); // décommentez pour le mode cadavre exquis
 
     void vers3 () {
 
-chiffreal = random(12,17);// décommentez pour le mode cadavre exquis
+chiffreal = random(0,5);// décommentez pour le mode cadavre exquis
 
   {
     strcpy_P(buffer, (char*)pgm_read_word(&(string_table3[chiffreal]))); 
@@ -96,7 +96,7 @@ chiffreal = random(12,17);// décommentez pour le mode cadavre exquis
   
   void vers4 () {
 
-chiffreal = random(18,23);// décommentez pour le mode cadavre exquis
+chiffreal = random(0,5);// décommentez pour le mode cadavre exquis
 
   {
     strcpy_P(buffer, (char*)pgm_read_word(&(string_table4[chiffreal]))); 
